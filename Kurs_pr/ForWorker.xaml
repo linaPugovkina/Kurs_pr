@@ -1,0 +1,31 @@
+﻿<Window x:Class="Kurs_pr.ForWorker"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kurs_pr"
+        mc:Ignorable="d"
+        Title="ForWorker" Height="450" Width="800"  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition/>
+            <RowDefinition Height="25.04"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="NailRai" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Tahoma" Margin="0,11,0,0" Height="36" Width="90"></TextBlock>
+
+
+        <Button Content="Выйти" HorizontalAlignment="Left" Margin="664,19,0,0" VerticalAlignment="Top" Width="108" Click="ButtonClose_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="106,329,0,0" TextWrapping="Wrap" x:Name="Money"  VerticalAlignment="Top" Grid.RowSpan="2" Grid.Row="1"/>
+        <ListBox Name="LbVisits" Grid.Row="1" Margin="20,39,378,0" SelectionChanged="LbVisits_SelectionChanged_1" Height="205" VerticalAlignment="Top" />
+        <TextBox x:Name="tbServ" IsReadOnly="True" materialDesign:HintAssist.Hint="Услуга"  HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Height="35" Margin="427,84,0,0" Grid.Row="1" />
+        <Label Content="Записи" HorizontalAlignment="Left" Margin="40,10,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <DatePicker x:Name="date" materialDesign:HintAssist.Hint="Дата и время" HorizontalAlignment="Left" Margin="428,142,0,0" Height="38" Width="216" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBox x:Name="search" materialDesign:HintAssist.Hint="Поиск" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalAlignment="Left" Margin="40,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Height="35" TextChanged="search_TextChanged" Grid.Row="1"/>
+        <Label Name ="count" Content=" " HorizontalAlignment="Left" Margin="106,10,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

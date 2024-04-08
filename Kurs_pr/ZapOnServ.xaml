@@ -1,0 +1,19 @@
+﻿<Window x:Class="Kurs_pr.ZapOnServ"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kurs_pr"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        Title="ZapOnServ" Height="450" Width="450">
+    <Grid>
+
+        <DatePicker x:Name="date" materialDesign:HintAssist.Hint="Дата и время" HorizontalAlignment="Center" Margin="0,53,0,0" VerticalAlignment="Top" Height="38" Width="216"/>
+        <ComboBox x:Name="cbServ" materialDesign:HintAssist.Hint="Услуга" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="117,111,117,0" Height="40" VerticalAlignment="Top" SelectionChanged="cbServ_SelectionChanged" />
+        <TextBox x:Name="tb2" IsReadOnly="True" materialDesign:HintAssist.Hint="Стоимость" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Height="35" Margin="0,206,0,0" />
+        <Button Content="Записаться" HorizontalAlignment="Center" Margin="0,268,0,0" VerticalAlignment="Top" Width="216" Height="34" Click="Zap_Click"/>
+        <ComboBox x:Name="cbWork" materialDesign:HintAssist.Hint="Специалист" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="117,161,117,0" Height="40" VerticalAlignment="Top" SelectionChanged="cbWork_SelectionChanged" />
+
+    </Grid>
+</Window>

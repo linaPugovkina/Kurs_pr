@@ -1,0 +1,23 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kurs_pr"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Kurs_pr.AddWorker"
+        mc:Ignorable="d"
+        Title="AddWorker" Height="450" Width="800">
+    <Grid>
+
+        <ListBox x:Name="Lbwork" Margin="26,46,539,120" SelectionChanged="Lbwork_SelectionChanged"/>
+        <Label Content="Специалисты" HorizontalAlignment="Left" Margin="31,14,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbSurname"  materialDesign:HintAssist.Hint="Фамилия Имя"  HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Height="35" Margin="382,22,0,0" />
+        <TextBox x:Name="tbAdress"  materialDesign:HintAssist.Hint="Адрес"  HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Height="35" Margin="382,103,0,0" />
+        <TextBox x:Name="tbtelephone"  materialDesign:HintAssist.Hint="Номер телефона"  HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Height="35" Margin="382,145,0,0" TextChanged="tbtelephone_TextChanged"  />
+        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="382,286,0,0" VerticalAlignment="Top" Width="216" Height="34" Click="butSave_Click"/>
+        <Button Content="Очистить" HorizontalAlignment="Left" Margin="382,334,0,0" VerticalAlignment="Top" Width="216" Height="34" Click="butClear_Click"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" Margin="382,240,0,0" VerticalAlignment="Top" Width="216" Height="34" Click="butDelete_Click"/>
+        <ComboBox x:Name="cbPosition" materialDesign:HintAssist.Hint="Должность" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="382,58,202,0" Height="40" VerticalAlignment="Top" SelectionChanged="cbPosition_SelectionChanged" />
+
+    </Grid>
+</Window>

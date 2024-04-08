@@ -1,0 +1,31 @@
+﻿<Window x:Class="Kurs_pr.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kurs_pr"
+        mc:Ignorable="d"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    Title="Авторизация" Height="450" Width="500">
+
+    <Grid Background="#ffdadada">
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Авторизация" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+
+
+                <TextBox Name="tblog" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+
+                <PasswordBox Name="passb" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+
+                <Button HorizontalAlignment="Center" Content="Войти" Margin="0 20" Style="{DynamicResource MaterialDesignFlatSecondaryDarkBgButton}" Width="491" Click="input_Click"/>
+                <Button HorizontalAlignment="Center" Content="Зарегистрироваться" Style="{DynamicResource MaterialDesignFlatSecondaryDarkBgButton}" Width="490" Click="regisr_Click"/>
+
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

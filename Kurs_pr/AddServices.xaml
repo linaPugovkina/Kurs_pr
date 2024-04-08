@@ -1,0 +1,23 @@
+﻿<Window x:Class="Kurs_pr.AddServices"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kurs_pr"
+        mc:Ignorable="d"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="AddServices" Height="417" Width="708">
+    <Grid>
+        <ListBox Name="LbServ" Margin="26,46,447,87" SelectionChanged="LbServ_SelectionChanged"/>
+        <Label Content="Услуги" HorizontalAlignment="Left" Margin="31,14,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbName"  materialDesign:HintAssist.Hint="Название услуги"  HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Height="35" Margin="382,22,0,0" />
+        <TextBox x:Name="tbCostPrice" materialDesign:HintAssist.Hint="Себестоимость"  HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Height="35" Margin="382,62,0,0" />
+        <TextBox x:Name="tbPrice"  materialDesign:HintAssist.Hint="Стоимость"  HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Height="35" Margin="382,103,0,0" />
+        <TextBox x:Name="tbDescr"  materialDesign:HintAssist.Hint="Описание"  HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" Height="35" Margin="382,200,0,0" />
+        <ComboBox x:Name="cbGrServ" materialDesign:HintAssist.Hint="Группа услуг" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="382,148,110,0" Height="40" VerticalAlignment="Top" SelectionChanged="cbServ_SelectionChanged" />
+        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="382,286,0,0" VerticalAlignment="Top" Width="216" Height="34" Click="butSave_Click"/>
+        <Button Content="Очистить" HorizontalAlignment="Left" Margin="382,334,0,0" VerticalAlignment="Top" Width="216" Height="34" Click="butClear_Click"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" Margin="382,240,0,0" VerticalAlignment="Top" Width="216" Height="34" Click="butDelete_Click"/>
+
+    </Grid>
+</Window>
